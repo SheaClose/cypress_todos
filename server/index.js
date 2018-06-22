@@ -8,6 +8,7 @@ const express = require("express"),
 
 massive(process.env.CONNECTION_STRING)
   .then(db => {
+    // db.query('create table todos (id serial primary key, is_complete bool, title varchar(50))')
     app.set("db", db);
   })
   .catch(console.log);
