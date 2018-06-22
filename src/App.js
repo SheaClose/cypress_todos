@@ -61,6 +61,7 @@ class App extends Component {
     axios
       .put(`/api/todos/${id}`, { isComplete })
       .then(({ data }) => {
+        console.log("data: ", data);
         this.setState({ todos: data });
       })
       .catch(console.log);
